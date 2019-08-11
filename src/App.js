@@ -1,18 +1,25 @@
 import React from "react";
-import "./App.css";
-import Navbar from './components/Navbar'
-import Dashboard from './components/Dashboard'
-import Login from './components/Login'
-import { Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+
+// New - import the React Router components, and the Profile page component
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Profile from "./components/Profile";
 
 function App() {
-    return (
-        <div className="App">
-          <Navbar />
-            <Route path="/" exact component={Login} />
-            <Route path="/dashboard" exact component={Dashboard} />
-        </div>
-    );
+  return (
+    <div className="App">
+      {/* New - use BrowserRouter to provide access to /profile */}
+      <BrowserRouter>
+        <header>
+          <NavBar />
+        </header>
+        <Switch>
+          <Route path="/" exact />
+          <Route path="/profile" component={Profile} />
+        </Switch>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
