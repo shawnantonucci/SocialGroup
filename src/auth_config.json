@@ -1,4 +1,5 @@
 {
     "domain": "dev-oazvo2v7.auth0.com",
-    "clientId": "52EZDU5D3di0l5It4SmlCmgGg6kYk8Eb"
+    "clientId": "52EZDU5D3di0l5It4SmlCmgGg6kYk8Eb",
+    "audience": "https://dev-oazvo2v7.auth0.com/api/v2/"
   }
